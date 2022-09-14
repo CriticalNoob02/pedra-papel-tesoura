@@ -143,7 +143,7 @@ def MostrarResult(resultado, nivel, jogada1, jogadaPC, nomeDoRival):
             print(f"Sua Jogada foi {jogada1}")
             print(f"{nomeDoRival} jogou {jogadaPC}")
             print("")
-            print(f"Você acabou de perder para uma MULHER em um esporte  kkkkkk que vergonha!!")
+            print(f"Você acabou de perder para uma menor de idade kkkkkk que vergonha!!")
             print("")
     elif nivel == 4:
         if resultado == 1:
