@@ -1,8 +1,12 @@
-from functions import JogadorPC, Jogador1,NomeOponente,Verificação,MostrarResult
+from functions import JogadorPC, Jogador1,NomeOponente,Verificação,MostrarResult,coresTerminal
+import os
+
+os.system("cls")
+ini,fim = coresTerminal(1,3,0)
 
 ## Apresentação e entrada do Nome;
 print("")
-print ("Bem-Vindo ao Jogo Pedra, Papel e Tesoura ")
+print (f"{ini}########### Bem-Vindo ao Jogo Pedra, Papel e Tesoura ###########{fim}")
 nome = input("Digite seu nome: ")
 print(" ")
 
@@ -14,6 +18,8 @@ nomeDoRival = NomeOponente(nivel)
 ## Placar;
 ptjogador = 0
 ptPC = 0
+
+os.system("cls")
 
 while True:
 
@@ -40,8 +46,9 @@ while True:
 
     ## Final da Partida;
     if ptjogador == 3:
-        print("Parabens!")
+        print(f"{ini}Parabens você passou de fase!{fim}")
         break
     elif ptPC == 3:
-        print("Infelizmente você foi Totalmente Derrotado")
+        ini,fim = coresTerminal(1,2,0)
+        print(f"{ini}Infelizmente você foi Totalmente Derrotado{fim}")
         break
